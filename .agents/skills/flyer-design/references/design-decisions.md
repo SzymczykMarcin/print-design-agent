@@ -15,6 +15,34 @@ Choose the structure from the content:
 
 Remove unnecessary content before reducing readable type. If required content is still too dense, change the structure or explain the format constraint.
 
+## Document geometry and image sizing
+
+For print, distinguish three areas before composing: the final trimmed page,
+artwork extending beyond it as bleed, and a safe region inside it for essential
+content. Use explicit units and the supplied template's trim, fold, mounting, and
+binding geometry. Extend edge-to-edge photographs/backgrounds through the bleed;
+keep text, logos, and QR codes inside the specified safe region. Bleed and safe
+insets are different values; neither has a universal size. If requirements are
+missing, record provisional values and keep production status unresolved. Final
+technical verification belongs to print preflight.
+
+For each placed raster image, calculate resolution using the source pixels that
+remain in its visible crop, before any artificial upsampling:
+
+- `effective_ppi_x = retained_pixel_width / (placed_width_mm / 25.4)`
+- `effective_ppi_y = retained_pixel_height / (placed_height_mm / 25.4)`
+
+Compare both axes with the brief or printer's target. For example, a 1200-pixel-wide
+crop placed at 100 mm provides about 305 ppi; at 200 mm it provides about 152 ppi.
+Include bleed when measuring an image spanning the full bleed area. For rotated
+images, use their physical dimensions before rotation, not the rotated bounding
+box. Record the crop, placement, calculated resolution, and any deficit in project
+notes. If no target exists, establish and label a working target appropriate to
+the medium and viewing distance instead of treating 300 ppi as universal.
+
+For digital output, check retained pixels against the requested export dimensions.
+Vector text and logos are resolution-independent; embedded raster images are not.
+
 ## Typography and language
 
 Build a small set of functional text styles: headline, supporting text, details, and CTA. One family with suitable weights can be enough. Add a second family for a purposeful contrast, not variety alone.
@@ -22,6 +50,8 @@ Build a small set of functional text styles: headline, supporting text, details,
 Judge font size using the actual font, viewing distance, audience, and background. For body paragraphs, 10-12 pt and leading around 120-145% are useful starting points from Practical Typography, not mandatory values for every flyer. Short display lines and narrow promotional blocks need their own treatment; do not impose book-length line measures.
 
 Use natural line breaks that preserve phrases, avoid stranded short words where the language requires it, and check local punctuation, diacritics, dates, currency, phone numbers, and nonbreaking spaces. Avoid excessively tracked paragraphs, stretched type, and tightly packed all-caps body copy. Thin reversed type needs especially careful visual judgment.
+
+Retain exact copy in `copy.md` and record font family/version where available, weight, size, leading, tracking, alignment, text frame, and intentional line breaks in the project's working notes or generation script. These are the reconstruction source when outlined text changes. Re-typeset from that source instead of editing individual letter shapes to change wording.
 
 Use installed fonts with the required glyph coverage. A brand font takes priority over a generic style preference. If it is unavailable, identify a substitution as a proposal rather than a faithful brand match.
 

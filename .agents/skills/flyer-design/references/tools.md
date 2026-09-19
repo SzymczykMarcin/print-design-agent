@@ -34,7 +34,7 @@ Keep installers and application binaries out of the repository and client delive
 
 ## Editable source and rendering
 
-For SVG, use explicit dimensions, a coherent viewBox, stable object IDs, separate text/vector/image objects, and portable embedded or correctly packaged image links. Inkscape SVG can retain layer names. Keep text editable in the master; conversion to outlines, if later required, belongs in a separate delivery copy.
+For SVG, use explicit dimensions, a coherent viewBox, stable object IDs, separate outlined-text/vector/image objects, and portable embedded or correctly packaged image links. Inkscape SVG can retain layer names. Text in the composition must be genuine font-derived curves; follow the conversion procedure below. Keep its reconstruction content and typography settings outside the outlined artwork.
 
 Verify commands against the installed version. Typical single-page CLI exports are:
 
@@ -46,6 +46,36 @@ inkscape "absolute/path/design.svg" --export-area-page --export-type=pdf --expor
 Use the resolved absolute executable path if it is not on PATH. Set PNG pixel dimensions deliberately for the target. For multiple pages, inspect the installed version's page export options or keep separate editable page files; do not assume one command handles every page.
 
 An Inkscape PDF export is not by itself a PDF/X or color-managed production guarantee. Hand it to the separate print-preflight workflow when print release is requested.
+
+## Convert typeset text to curves
+
+Use this for all newly composed promotional text, including captions and fine
+print. Font choice and typesetting come first; native outlining follows immediately
+once the block's layout is established, before reviewed artwork is saved or exported.
+
+1. Use the actual available font and weight, with correct shaping, diacritics,
+   ligatures, kerning, line breaks, and paragraph layout. Resolve missing glyphs or
+   substitutions before conversion; outlining freezes mistakes too.
+2. Preserve exact content in `copy.md` and the reproducible typography recipe in
+   working notes or the project-local script. Live text may exist transiently for
+   composition, but should not remain as hidden duplicates in the delivered artwork.
+3. Convert using CorelDRAW's native text-to-curves operation through a verified
+   interface, or Inkscape's native object-to-path/text outlining through its verified
+   UI or CLI/actions. Another font-aware vector tool is acceptable if it preserves
+   the actual font's shaping and layout. Do not guess API methods or action names.
+4. Keep converted blocks grouped and named by role. Compare renders before and
+   after conversion for changed spacing, clipping, glyph loss, counters, or movement.
+   Inspect the saved document's object types: letters must be vector paths, not live
+   text, bitmap traces, or embedded text screenshots. Outlining only the PDF export
+   does not satisfy the requirement for the CDR/SVG composition.
+5. For copy edits, re-typeset the affected block from its stored content and settings,
+   convert it again, and repeat the comparison and proofreading. Do not distort
+   outlined paragraphs to fit a new format; recompose their typography.
+
+Do not use logo-vectorizer or image generation to construct typeset lettering.
+If conversion cannot be performed or verified, retain the recoverable draft and
+report the missing operation; do not label the artwork as outlined. This requirement
+does not authorize changing an existing client master that must remain untouched.
 
 ## Prepare a raster logo
 

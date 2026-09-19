@@ -2,7 +2,7 @@
 
 A workshop for creating print flyers and social media graphics from real photographs, authentic logos, and brand guidelines.
 
-**Status: initial design skill available.** The [flyer-design skill](.agents/skills/flyer-design/SKILL.md) covers promotional design and visual review. The workflow uses direct CorelDRAW COM scripting or editable SVG with Inkscape CLI. The standalone [logo-vectorizer](tools/logo-vectorizer/README.md) prepares raster logos. Other optional helpers and print-preflight validation remain planned.
+**Status: design and print-inspection skills available.** The [flyer-design skill](.agents/skills/flyer-design/SKILL.md) covers promotional design and visual review. The workflow uses direct CorelDRAW COM scripting or editable SVG with Inkscape CLI. The standalone [logo-vectorizer](tools/logo-vectorizer/README.md) prepares raster logos. The [print-preflight skill](.agents/skills/print-preflight/SKILL.md) checks final print PDFs against printer requirements and reports evidence and unresolved checks; inspection depends on available tools. Other optional helpers remain planned.
 
 ## Contents
 
@@ -25,6 +25,7 @@ Build skills and tools that turn supplied materials into editable designs, print
 ```text
 print-design-agent/
 |-- README.md                    Project overview and usage
+|-- AGENTS.md                    User guidance and workflow routing
 |-- LICENSE                      Code license
 |-- .gitignore                   Local and generated file exclusions
 |-- .agents/skills/              Task-specific skills
@@ -63,6 +64,10 @@ Example request:
 
 > Use $flyer-design for the project at <absolute project path>. Read the brief and copy, inspect the supplied assets, and design the requested promotional material.
 
+After design, request a technical inspection:
+
+> Use $print-preflight on <absolute PDF path> for the project at <absolute project path>. Compare it with the supplied printer requirements and write an evidence-based report. Do not modify the artwork.
+
 Each project contains:
 
 | Location | Purpose |
@@ -83,10 +88,10 @@ Do not commit client materials, commercial fonts, private machine paths, or secr
 
 ## Workflow and next steps
 
-A future `AGENTS.md` will describe how the agent creates flyers: the design workflow, use of materials and tools, and quality checks. Its contents will be established in a later stage.
+[AGENTS.md](AGENTS.md) guides the agent through project setup, short intake questions, skill selection, revisions, and delivery. It keeps missing information and project decisions visible without duplicating the skills.
 
 Brief -> asset review -> copy and concept -> editable layout -> format adaptations -> export review -> delivery.
 
-Next, validate flyer-design on one real flyer. Use the bundled logo tool where needed and add a separate print-preflight skill based on demonstrated needs. Add MCP and additional agents when they serve a concrete need.
+Next, validate flyer-design on one real flyer. Use the bundled logo tool where needed, then run print-preflight on the final PDF against the chosen printer's requirements. Add MCP and additional agents when they serve a concrete need.
 
 Code is covered by the [MIT license](LICENSE). Project assets retain their own licensing terms.
