@@ -30,3 +30,7 @@ htmlcov/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Standalone logo tool: no private inputs or generated artifacts
+/tools/logo-vectorizer/outputs/
+/tools/logo-vectorizer/test-data/

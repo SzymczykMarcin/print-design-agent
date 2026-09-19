@@ -2,7 +2,7 @@
 
 A workshop for creating print flyers and social media graphics from real photographs, authentic logos, and brand guidelines.
 
-**Status: repository scaffold.** Automation, CorelDRAW integration, and output validation are planned, not implemented.
+**Status: initial design skill available.** The [flyer-design skill](.agents/skills/flyer-design/SKILL.md) covers promotional design and visual review. The workflow uses direct CorelDRAW COM scripting or editable SVG with Inkscape CLI. The standalone [logo-vectorizer](tools/logo-vectorizer/README.md) prepares raster logos. Other optional helpers and print-preflight validation remain planned.
 
 ## Contents
 
@@ -27,7 +27,8 @@ print-design-agent/
 |-- README.md                    Project overview and usage
 |-- LICENSE                      Code license
 |-- .gitignore                   Local and generated file exclusions
-|-- .agents/skills/              Future task-specific skills
+|-- .agents/skills/              Task-specific skills
+|-- tools/logo-vectorizer/       Standalone logo tool, tests, and usage guide
 |-- src/print_design_agent/      Future tools and integrations
 |-- tests/                      Tool tests
 |-- examples/
@@ -60,7 +61,7 @@ chosen-folder/
 
 Example request:
 
-> Work on the project at <absolute project path>. Read the brief and copy, inspect inputs, identify missing information, and propose the next step using this repository's instructions.
+> Use $flyer-design for the project at <absolute project path>. Read the brief and copy, inspect the supplied assets, and design the requested promotional material.
 
 Each project contains:
 
@@ -76,7 +77,7 @@ Each project contains:
 | `exports/social/` | Social media deliverables |
 | `reports/` | Decisions and quality checks |
 
-This is currently an organizational workflow, not an automatic flyer generator. There is no installer or CLI yet. Record project settings in `brief.md` until a configuration format is established through a real project.
+The skill guides an agent; it is not a standalone flyer generator. It prefers usable CorelDRAW and falls back to Inkscape, installing Inkscape when needed and permitted by the host. Missing dedicated helpers are explicitly documented as placeholders. The logo tool has its own installation and CLI; there is no end-to-end flyer generator. Record project settings in `brief.md` until a configuration format is established through a real project.
 
 Do not commit client materials, commercial fonts, private machine paths, or secrets. Public examples must contain only materials cleared for publication. You may remove `.gitkeep` files from private project copies.
 
@@ -86,6 +87,6 @@ A future `AGENTS.md` will describe how the agent creates flyers: the design work
 
 Brief -> asset review -> copy and concept -> editable layout -> format adaptations -> export review -> delivery.
 
-First, validate this process on one real flyer. Then add the main skill, necessary Python tools, integration with the existing logo vectorizer, and a CorelDRAW adapter. Add MCP and additional agents when they serve a concrete need.
+Next, validate flyer-design on one real flyer. Use the bundled logo tool where needed and add a separate print-preflight skill based on demonstrated needs. Add MCP and additional agents when they serve a concrete need.
 
 Code is covered by the [MIT license](LICENSE). Project assets retain their own licensing terms.
