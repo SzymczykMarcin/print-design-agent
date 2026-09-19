@@ -1,0 +1,32 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+*.local.toml
+*.local.yaml
+*.local.json
+
+# Private projects belong outside the repository; additional protection
+/print-design-workspace/
+/projects/
+/brands/
+/outputs/
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
