@@ -1,0 +1,108 @@
+{
+  "text_operators": 0,
+  "path_paints": 494,
+  "rgb_operators": 0,
+  "images": [
+    {
+      "pixels": [
+        3451,
+        5000
+      ],
+      "ppi": [
+        486.9741776607515,
+        486.97420431357153
+      ],
+      "color_space": {
+        "type": "ICCBased",
+        "components": 4,
+        "profile": "ISO Coated v2 (ECI)",
+        "sha256": "128dc02f7246cc3807af0323695379f64151a8f27a587736acc59f8b6ce894b8"
+      },
+      "max_ink_percent": 327.05882352941177,
+      "soft_mask": "None",
+      "filter": "['/FlateDecode']"
+    }
+  ],
+  "vector_cmyk_max_percent": 299.21000000000004,
+  "color_spaces": {
+    "/DefaultCMYK": {
+      "type": "ICCBased",
+      "components": 4,
+      "profile": "ISO Coated v2 (ECI)",
+      "sha256": "128dc02f7246cc3807af0323695379f64151a8f27a587736acc59f8b6ce894b8"
+    },
+    "/CS9": {
+      "type": "ICCBased",
+      "components": 4,
+      "profile": "ISO Coated v2 (ECI)",
+      "sha256": "128dc02f7246cc3807af0323695379f64151a8f27a587736acc59f8b6ce894b8"
+    }
+  },
+  "graphics_states": [
+    {
+      "/Type": "/ExtGState",
+      "/RI": "/Perceptual"
+    },
+    {
+      "/Type": "/ExtGState",
+      "/op": "False",
+      "/OP": "False",
+      "/OPM": "0"
+    }
+  ],
+  "shadings": 0,
+  "patterns": 0,
+  "sha256": "ceba624370eddbf92339e7062dad7ed7ffc6bad6ef2dfbb2afde0bf0131694db",
+  "bytes": 35526900,
+  "pages": 1,
+  "encrypted": false,
+  "annotations": 0,
+  "forms": false,
+  "embedded_files": false,
+  "media_mm": [
+    0.0,
+    0.0,
+    151.99998527777777,
+    214.00000944444443
+  ],
+  "trim_mm": [
+    2.0000000004999996,
+    2.0000000004999996,
+    149.9999998611111,
+    212.00000003888886
+  ],
+  "bleed_mm": [
+    0.0,
+    0.0,
+    151.99998527777777,
+    214.00000944444443
+  ],
+  "rotation": 0,
+  "user_unit": 1,
+  "output_profile": {
+    "type": "ICCBased",
+    "components": 4,
+    "profile": "ISO Coated v2 (ECI)",
+    "sha256": "128dc02f7246cc3807af0323695379f64151a8f27a587736acc59f8b6ce894b8"
+  },
+  "pdfinfo": "Title:           \nAuthor:          Marcin Szymczyk\nCreator:         CorelDRAW 2024\nProducer:        Corel PDF Engine Version 25.2.1.313\nCreationDate:    Sun Sep 20 11:58:26 2026 Środkowoeuropejski czas letni\nModDate:         Sun Sep 20 11:58:26 2026 Środkowoeuropejski czas letni\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           1\nEncrypted:       no\nPage size:       430.866 x 606.614 pts\nPage rot:        0\nMediaBox:            0.00     0.00   430.87   606.61\nCropBox:             0.00     0.00   430.87   606.61\nBleedBox:            0.00     0.00   430.87   606.61\nTrimBox:             5.67     5.67   425.20   600.94\nArtBox:              0.00     0.00   430.87   606.61\nFile size:       35526900 bytes\nOptimized:       no\nPDF version:     1.7\n",
+  "outlining": {
+    "mean_channel_difference": 0.9475116996983451,
+    "changed_pixel_fraction": 0.018358306785825042
+  },
+  "separation": {
+    "resolution_ppi": 600,
+    "max_local_ink_percent": 327.05882352941177,
+    "profile_sha256": "128dc02f7246cc3807af0323695379f64151a8f27a587736acc59f8b6ce894b8",
+    "ghostscript_version": "10.03.1",
+    "overprint_flags": [
+      {
+        "/Type": "/ExtGState",
+        "/op": "False",
+        "/OP": "False",
+        "/OPM": "0"
+      }
+    ]
+  },
+  "minimum_type_distance_inside_trim_mm": 5.2814
+}

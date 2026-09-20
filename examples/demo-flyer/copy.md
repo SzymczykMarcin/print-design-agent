@@ -1,77 +1,38 @@
-# Project copy
+# Flyer copy
 
-Status: authored for a fictional demonstration; not approved for real publication.
-Only the blocks below belong in the artwork. Section labels and status notes do not.
-Keep the Polish lettering embedded in the supplied logo unchanged.
+Status: fictional Polish demo copy, authored within the requested example scope.
+Not approved for a real business. Preserve Polish text inside the supplied logo.
 
-## Flyer
+## Headline
 
-### Headline
+Lato
+smakuje
+LEPIEJ!
 
-Make room for a little joy.
+## Offer
 
-### Description / offer
+W rożku czy w kubeczku?
+Po prostu: po swojemu.
 
-Vanilla or chocolate. Cone or cup.
-Take an ice-cream break at Lodziarnia.
+## Sticker
 
-### Call to action
+Chwila
+dla siebie
 
-Drop by for your next treat.
+## Call to action
 
-### Visit details
+Wpadnij na lepszy dzień!
 
-12 Vanilla Lane, Sampletown
-Daily, 12:00-20:00
+## Visit details
 
-### Additional information / fine print
+ul. Waniliowa 12 · Miasto Przykładowe
+Codziennie 12:00–20:00
 
-Demo only - fictional shop details.
+## Required demo notice
 
-## Social feed
+Projekt demonstracyjny · fikcyjne dane lokalu
 
-### Headline
+## Facts
 
-Make room for a little joy.
-
-### Description / offer
-
-Vanilla or chocolate. Cone or cup.
-
-### Call to action
-
-Drop by Lodziarnia.
-
-### Visit details
-
-12 Vanilla Lane, Sampletown | Daily, 12:00-20:00
-
-### Additional information / fine print
-
-Demo only - fictional shop details.
-
-## Social story
-
-### Headline
-
-A little ice-cream break.
-
-### Call to action
-
-Drop by Lodziarnia.
-
-### Visit details
-
-12 Vanilla Lane, Sampletown
-Daily, 12:00-20:00
-
-### Additional information / fine print
-
-Demo only - fictional shop details.
-
-## Facts requiring confirmation
-
-The product range, address and hours are invented example data. For a real project,
-replace them with verified business facts and remove the demo notice only after
-that review. No web address, phone number, social handle or QR destination is supplied
-or required for this walk-in exercise. Do not invent one during design.
+Offer, street, town and hours are fictional example data. No prices, ingredient
+claims, discounts, testimonials, website or QR destination are asserted.

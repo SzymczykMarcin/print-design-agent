@@ -8,9 +8,9 @@ relicensed under the repository's MIT code license. Paths below are project-rela
 - File: `inputs/logos/lodziarnia.svg`.
 - Source: user-selected ice-cream-shop logo from the logo-vectorizer project's
   `test-data/logos/results/simplified-verification/lodziarnia/lodziarnia.vector.svg`.
-- Preparation: existing VTracer 0.6.15 no-cleanup result; copied byte for byte,
+- Preparation: existing VTracer no-cleanup result; copied byte for byte,
   not retraced. Original tracing source was `lodziarnia.png`.
-- Format: SVG, viewBox `None`; paths, no embedded raster or live text.
+- Format: SVG, 1280 x 1280 source canvas; paths, no embedded raster or live text.
 - Wording: LODZIARNIA / SMAK LEPSZYCH DNI.
 - Review: the earlier preview was visually inspected; the mark has small trace
   irregularities. Keep it unchanged and inspect its tagline at final placement.
@@ -52,3 +52,29 @@ relicensed under the repository's MIT code license. Paths below are project-rela
   letter coverage verified. Editor installation and text outlining belong to design setup.
 - Lato-Bold.ttf SHA-256: `8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1`.
 - Lato-Regular.ttf SHA-256: `d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251`.
+
+## Additional display fonts
+
+Retrieved 2026-09-20 from the official Google Fonts repository:
+
+- `inputs/fonts/pacifico/Pacifico-Regular.ttf`: Pacifico Regular;
+  [source and authorship](https://github.com/google/fonts/tree/main/ofl/pacifico).
+- `inputs/fonts/bebasneue/BebasNeue-Regular.ttf`: Bebas Neue Regular;
+  [source and authorship](https://github.com/google/fonts/tree/main/ofl/bebasneue).
+
+Each directory includes its original SIL Open Font License. Fonts remain separate
+from the repository's code license. Corel resolved Pacifico, Bebas Neue and Lato by
+name; native outlining and the rendered Polish glyphs were checked. Lato Bold is
+retained as an original input but is not used in this revision.
+
+## Revision v02 usage
+
+Photo: original 3451 x 5000 pixels, placed 180 x 260.794 mm at (-34, -12) mm
+relative to the bleed-page top-left. Vector overlays hide the unused right/lower
+areas; the actual PDF placement is 486.97 PPI on both axes. No upsampling.
+The self-contained SVG embeds the original JPEG. Corel's PNG export had a mean
+0.119/255 channel difference from the original; packaging restores the original
+JPEG instead of retaining that unnecessary PNG conversion. The reopened SVG was
+visually compared with the native composition. Print conversion is perceptual
+sRGB to ISO Coated v2 (ECI), performed by Corel; the PDF stores CMYK photo pixels.
+Original logo and photo hashes remain unchanged.

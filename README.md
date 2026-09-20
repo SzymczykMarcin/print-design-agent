@@ -46,9 +46,9 @@ The agent handles required runtime setup using [environment preparation](docs/en
 
 Reusable code lives in `tools/<tool-name>/`. Each tool owns its `src/`, `tests/`, and usage guide. All tools share the root Poetry manifest, lockfile, and Python environment; there is no parallel repository-level application package.
 
-The [blank project](examples/blank-project/brief.md) and [filled example](examples/demo-flyer/brief.md) live together with matching folders and document roles. The demo is a fictional ice-cream shop brief with an existing vector logo, a stock photo, Lato fonts, a brandbook and copy for three formats. It includes finished A5 and social designs, CDR/SVG masters, PNG previews, a candidate PDF and an inspection report. Open the [overview](examples/demo-flyer/previews/overview-v01.jpg) or the [delivery index](examples/demo-flyer/reports/status.md). The blank project contains empty fields and asset folders. See the demo [asset register](examples/demo-flyer/assets.md) for sources and separate asset licenses.
+The [blank project](examples/blank-project/brief.md) and [filled example](examples/demo-flyer/brief.md) live together with matching document roles. The demo contains one fictional ice-cream-shop A5 flyer: Polish copy, a real stock photo, the supplied vector logo, a playful brand direction, outlined CDR/SVG masters and a verified CMYK print PDF. Open the [flyer preview](examples/demo-flyer/previews/flyer-a5-front-v02.png) or the [delivery index](examples/demo-flyer/reports/status.md). Printer requirements, assumptions and inspection evidence accompany the release. The blank project contains empty fields and asset folders; the demo keeps only folders used by its workflow. See the [asset register](examples/demo-flyer/assets.md) for sources and separate licenses.
 
-Empty directories use `.gitkeep` files so Git can retain them. They do not represent implemented features. Repository documentation, examples, and code use English.
+Empty directories use `.gitkeep` files so Git can retain them. They do not represent implemented features. Repository documentation and code use English; artwork copy follows the project language.
 
 ## Shared runtime
 
@@ -119,8 +119,8 @@ Do not commit client materials, commercial fonts, private machine paths, or secr
 
 One material per task: brief -> asset review -> copy and concept -> editable layout -> production preparation and verification (print) or export review (digital) -> delivery.
 
-A poster, flyer, feed graphic and story are separate tasks. A later task can reuse the preceding design and assets. The existing multi-format demo is a legacy reference, not an instruction to batch materials or treat its unverified PDF as a production release.
+A poster, flyer, feed graphic and story are separate tasks. A later task can reuse the preceding design and assets. The demo now demonstrates one material and one production release.
 
-The completed fictional example demonstrates the workflow; its print report records the unresolved printer requirements. Next, validate flyer-design on one real flyer. Use the bundled logo tool where needed, then run print-preflight on the final PDF against the chosen printer's requirements. Add MCP and additional agents when they serve a concrete need.
+The completed fictional example demonstrates design, revision and production checks against an explicitly chosen Print24 coated-paper target. Its pass applies to that specification and file, not arbitrary printers. For real work, supply verified business facts and current printer requirements. Use the bundled logo tool when needed; add MCP or additional agents only when they serve a concrete need.
 
 Code is covered by the [MIT license](LICENSE). Project assets retain their own licensing terms.
