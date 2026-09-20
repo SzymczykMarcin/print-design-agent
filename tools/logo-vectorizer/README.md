@@ -11,33 +11,24 @@ Prefer an original vector logo. Use this tool when only a raster logo is availab
 and the design needs editable paths or scalable artwork. It is not a photo
 vectorizer, a logo generator, or a way to recover missing detail.
 
-## Install
+## Shared environment
 
-Requires Python 3.11+. From this folder, create an isolated environment:
+Use the repository's Python 3.12 and Poetry environment. From the repository root:
 
 ```shell
-python -m venv .venv
+poetry env use 3.12
+poetry install
 ```
 
-Windows:
-
-```powershell
-.venv/Scripts/python.exe -m pip install -e ".[quality]"
-```
-
-macOS/Linux:
-
-```sh
-.venv/bin/python -m pip install -e ".[quality]"
-```
-
-The `quality` extra adds development checks; omit it for runtime-only installation.
-Use this environment's Python for every command below.
+The agent handles missing dependencies using [environment preparation](../../docs/environment.md).
+This tool has no separate environment or dependency manifest.
 
 ## Run
 
+Run from the repository root:
+
 ```shell
-python -m logo_vectorizer "/absolute/private-project/inputs/logo.png" --out-dir "/absolute/private-project/assets/logos/v01"
+poetry run logo-vectorizer "/absolute/private-project/inputs/logo.png" --out-dir "/absolute/private-project/assets/logos/v01"
 ```
 
 Always provide an external `--out-dir` during flyer work. The tool creates a folder
@@ -64,6 +55,8 @@ PDF; final print checks belong to the separate preflight workflow.
 
 ## Python and development
 
+Run scripts with `poetry run python` from the repository root.
+
 ```python
 from pathlib import Path
 from logo_vectorizer.config import OutputFormat, resolve_output_paths
@@ -75,8 +68,8 @@ vectorize(source, paths, {OutputFormat.SVG, OutputFormat.PNG})
 ```
 
 ```shell
-python -m pytest
-python -m ruff check src tests
+poetry run pytest tools/logo-vectorizer/tests
+poetry run ruff check tools/logo-vectorizer
 ```
 
 CLI exit codes: `0` success, `2` invalid arguments, `1` execution failure.

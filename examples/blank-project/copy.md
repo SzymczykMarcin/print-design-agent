@@ -1,15 +1,45 @@
 # Project copy
 
-Status: draft / approved by the user
+- Status:
+- Language:
+- Approval source and date:
+- Existing logo wording to preserve:
 
-## Headline
+Only completed content blocks belong in the artwork. Duplicate format sections
+when needed; remove unused ones. Do not render empty fields or these instructions.
 
-## Description / offer
+## Flyer
 
-## Call to action
+### Headline
 
-## Contact
+### Description / offer
 
-## Additional information / fine print
+### Call to action
+
+### Visit details
+
+### Additional information / fine print
+
+## Social feed
+
+### Headline
+
+### Description / offer
+
+### Call to action
+
+### Visit details
+
+### Additional information / fine print
+
+## Social story
+
+### Headline
+
+### Call to action
+
+### Visit details
+
+### Additional information / fine print
 
 ## Facts requiring confirmation

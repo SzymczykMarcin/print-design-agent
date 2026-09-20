@@ -1,5 +1,9 @@
 # Tools and capability placeholders
 
+Before first use, follow the shared [environment preparation](../../../../docs/environment.md)
+procedure: detect/install required dependencies, use the single root Poetry
+environment with Python 3.12 for every tool, and verify a real operation.
+
 Read before backend selection, automatic dependency installation, or work needing accurate measurements or specialized image operations.
 
 ## Select a usable backend
@@ -85,11 +89,11 @@ Use it when only raster artwork exists and editable or scalable logo paths are
 needed. Prefer supplied original SVG/PDF/CDR artwork; do not trace photographs or
 vectorize every logo automatically.
 
-1. Inspect the original and read the tool README. Set up its isolated Python
-   environment and declared dependencies when needed, within host permissions.
-2. Run that environment's Python with the original's absolute path and an explicit
+1. Inspect the original and read the tool README. Set up the shared root Poetry
+   environment and locked dependencies when needed, within host permissions.
+2. From the repository root, run through Poetry with the original's absolute path and an explicit
    private output directory, such as `<project>/assets/logos/v01`:
-   `python -m logo_vectorizer "<project>/inputs/logo.png" --out-dir "<project>/assets/logos/v01"`.
+   `poetry run logo-vectorizer "<project>/inputs/logo.png" --out-dir "<project>/assets/logos/v01"`.
    The fixed workflow is VTracer without custom cleanup. Do not supply removed
    engine, palette, quality, mode, or cleanup switches.
 3. Inspect the generated preview against the original at placement size and close

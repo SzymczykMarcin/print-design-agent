@@ -1,113 +1,129 @@
 ---
 name: flyer-design
-description: Design or revise promotional flyers, posters, banners, and social media graphics from a brief, real assets, and brand guidelines. Covers copy, art direction, editable composition, visual review, and format adaptations. Does not perform print preflight or certify press-ready PDFs.
+description: Design or revise one promotional flyer, poster, banner or social graphic from a brief, real assets and brand rules. Covers copy, creative direction, editable composition and visual review. Print production release belongs to print-preflight.
 ---
 
 # Flyer Design
 
-Create a promotional piece that communicates a specific offer to a specific audience and gives them a clear next action. Prioritize flyers; adapt the method to posters, banners, and social graphics. Deliver an editable design and inspect its rendered appearance.
+Deliver a distinctive, effective composition for the selected material. Readability
+and a successful export alone do not establish design quality. Work in the user's
+project, preserving originals and accepted decisions; adaptations are separate tasks.
 
-## Scope and working context
+## Load details only when needed
 
-- Handle communication, copy, composition, asset treatment, and adaptations. Respect supplied production dimensions and templates while designing.
-- Leave PDF/X validation, ICC conversion, ink limits, separations, and technical release checks to a separate print-preflight workflow. Do not call a review PDF "print-ready".
-- Use the user's project directory and existing organization. In this repository, projects belong in the external workspace: originals in `inputs/`, derivatives in `assets/`, editable designs in `working/`, previews in `previews/`, and decisions in `reports/`. Do not put client work into the skill or public examples.
-- Read existing brief, copy, brand assets, and accepted designs before asking questions. Ask only about missing information that changes the design or blocks delivery; continue independent work.
-- Make a narrow revision when requested. Preserve accepted elements instead of restarting the whole process.
+Read the named sections, not every reference on entry. Reuse applicable project
+notes and research; do not repeat intake or setup for a narrow revision.
 
-## 1. Establish the design brief
+| Decision / operation | Reference sections |
+| --- | --- |
+| New or weak concept | [Design moves](references/design-decisions.md#available-design-moves), [reference interpretation](references/design-decisions.md#from-reference-to-editable-construction), [direction selection](references/design-decisions.md#selecting-and-challenging-a-direction) |
+| Print geometry / crop resolution | [Geometry and sizing](references/design-decisions.md#document-geometry-and-image-sizing) |
+| Type fitting / language | [Typography](references/design-decisions.md#typography-and-language) |
+| Format adaptation / revision | [Medium adaptations](references/design-decisions.md#medium-adaptations), [revision decisions](references/design-decisions.md#revision-decisions) |
+| Editor selection / setup | [Backend](references/tools.md#select-a-usable-backend), [direct scripting](references/tools.md#use-the-editor-directly); installation section only if needed |
+| Text outlining | [Text to curves](references/tools.md#convert-typeset-text-to-curves) |
+| Raster logo preparation | [Logo procedure](references/tools.md#prepare-a-raster-logo) |
+| Missing capability | [Capability gaps](references/tools.md#capability-placeholders); these are not implemented commands |
+| Research / attribution | [Sources](references/sources.md) |
 
-Identify the audience, offer, communication goal, distribution context, primary action, format, and necessary content. Establish whether the piece is read in the hand, from a distance, or on a phone.
+## 1. Resolve the brief and copy
 
-Before laying out a print piece, establish trim size, bleed on each edge, safe content insets, page sides, and any fold or finishing template. Use supplied production requirements; record missing values as draft assumptions rather than printer-approved settings. See [document geometry and image sizing](references/design-decisions.md#document-geometry-and-image-sizing).
+Read the existing brief, copy, brand rules and assets. Establish audience, offer,
+primary action, viewing context, dimensions/sides and required content. For print,
+resolve trim, bleed, safe insets and any finishing template before composition;
+label missing production values as provisional, not printer-approved.
 
-Treat supplied facts, brand rules, and required text as constraints. Record unresolved dates, prices, contacts, claims, and dimensions; never invent them. Missing factual content may use conspicuous placeholders in a draft, but must not silently enter a finished deliverable.
+Inspect actual photos and logo variants. Preserve logo geometry, colors and
+lettering. Prefer supplied vectors; use the linked logo procedure only when raster
+tracing adds value. Do not regenerate identity to conceal poor source quality.
 
-Inspect actual source images and logo variants. Choose the lead image for its relevance, clarity, crop options, and useful negative space. Keep subjects recognizable. Prefer original vector logos; do not redraw, recolor, stretch, or regenerate the mark to fit a concept.
+Write a clear attention -> value -> action sequence in the project's language.
+Include the relevant event/business facts and necessary qualifications; keep one
+primary CTA. Separate proposed copy from approval. Never invent real prices,
+contacts, dates, testimonials, credentials or scarcity. Conspicuous placeholders
+may appear in drafts, not silently in finished work. For excessive copy, simplify
+within scope or propose a different structure/format before shrinking everything.
+Generate any QR with a real encoder and a supplied destination.
 
-When a raster-only logo needs editable paths or scalable artwork, use the bundled
-[logo-vectorizer](../../../tools/logo-vectorizer/README.md). Follow the
-[logo preparation procedure](references/tools.md#prepare-a-raster-logo) before
-placing its SVG. Keep a suitable existing vector or raster when tracing offers no
-benefit; never regenerate brand identity to compensate for a poor trace.
+## 2. Choose a visual idea
 
-Record a compact working brief in the project's existing brief or notes: main message, first thing to notice, supporting proof, action, chosen assets, and format. Avoid a long design manifesto.
+Start with supplied references; identify attraction, energy, type/image relationship,
+crop, rhythm and density, plus weaknesses that should not transfer. An AI-generated
+reference supplies visual direction, not factual claims or a bitmap to trace.
+For a new/unresolved direction, visually inspect relevant professional examples
+and record useful principles/links. Search snippets alone are insufficient; do not
+copy layouts or unlicensed assets. Established work may not need new research.
 
-## 2. Shape the message
+State the concept briefly: what attracts attention, what feeling fits the brand,
+and how the message becomes visual. When unresolved or generic, render materially
+different rough compositions and choose the strongest; recoloring one layout is
+not concept exploration. Do not impose a fixed number of variants or approval gates.
 
-Build a reading order appropriate to the brief:
-- **Attention:** a specific headline or unmistakable subject.
-- **Value:** the benefit or offer and the evidence supporting it.
-- **Action:** what to do next, with the information needed to do it.
+Use typography, imagery, shape and space expressively. Formal work can benefit
+from scale, controlled asymmetry, a striking crop or a visual metaphor; playful
+work may use layering, lettering or illustration. Neither minimalism nor decoration
+is the default. Choose from the brief, not from the easiest script to write.
 
-For an event, include the relevant who, what, when, where, and reason to attend. For a service or product, explain the benefit and how to inquire or buy. Use the audience's language, not internal design vocabulary.
+Respect supplied/accepted brand rules. An agent-invented demo brandbook is
+provisional: revise its choices if they weaken the actual design, and record them.
+Do not cite your own early restrictions to defend a rejected or unconvincing result.
 
-Edit for clarity and factual fidelity. Separate proposed rewrites from approved copy. Do not manufacture testimonials, discounts, scarcity, or credentials. Preserve required qualifications. If content does not fit, simplify with the user's intent intact, redistribute it, or propose a larger/two-sided format before shrinking everything.
+## 3. Construct editable artwork
 
-Use one primary call to action; keep necessary secondary contact information subordinate. A QR code supports a real action and needs a readable explanation or alternative contact route. Generate it with a real tool, never draw an approximation.
+Prefer usable CorelDRAW with verified direct COM scripting; otherwise use Inkscape,
+installing it when needed and permitted. No custom adapter/MCP is required. Follow
+the linked backend guidance on first selection or failure; use project-local
+scripts as needed instead of reducing the concept to a helper's limited operations.
 
-## 3. Choose a visual direction
+- Save genuine CDR or SVG with named, separate image, vector and lettering objects.
+- Typeset with real available fonts, correct glyphs and weights; disclose missing
+  fonts rather than silently substitute. Convert laid-out text using the editor's
+  native outlining before reviewed artwork/delivery. Keep exact copy and font,
+  size, leading, tracking and line-break recipes outside the outlined artwork.
+- Compare before/after outlining and verify actual object types. No traced bitmap
+  letters, hidden live-text duplicates or PDF-only outlining. Re-typeset copy edits.
+- Build with real photos, editable paths, masks and native effects. Use generative
+  imagery only with explicit user permission; never replace composition, authentic
+  logos or typeset copy with it. Preserve originals, rights and licensed font limits.
+- Calculate effective PPI from retained crop pixels and placed size including bleed.
+  Resolve shortfalls through better sources, smaller placement or another crop;
+  metadata edits and upsampling do not restore detail.
+- Embed/package image links and record asset/crop choices for reproducibility.
 
-Read [composition and adaptations](references/design-decisions.md) when selecting a layout or changing medium.
+## 4. Render, critique and improve
 
-If brand guidance is incomplete, establish a provisional design system from supplied assets: palette with color values, available font families and weights, text styles, and logo variant/clear-space rules. Record it in the project brief, distinguish supplied rules from proposed choices, and apply it consistently across formats. Do not present sampled logo colors as official specifications or invent brand approval.
+Inspect a render of the actual outlined source at thumbnail, intended viewing size
+and close-up. Screen estimates of physical size/color have limits. Check:
 
-Define a brief visual direction: image treatment, typographic character, palette, hierarchy, grid, and balance of content and space. Explain choices through the audience, offer, assets, and brand. Use references for principles, not copied artwork.
+- Immediate subject/offer and next action; intentional hierarchy and reading order.
+- Character and distinctiveness appropriate to the brief, including formal work.
+- Coherent image/type relationships, crop, alignment, spacing and local contrast;
+  no clipping, substitutions, collisions or unreadably small essential information.
+- A specific visual idea, not merely separate photo/text rectangles or an interchangeable
+  layout. Compare craft and energy with references without copying their surface style.
+- Exact visible copy against `copy.md`: omissions, spelling, glyphs, dates, numbers,
+  contacts and qualifications. Decode any rendered QR and compare its payload.
+  OCR may assist but cannot replace proofreading outlined lettering.
 
-Explore materially different directions when the brief calls for exploration or remains ambiguous. For a clear brief, proceed with a reasoned direction; do not force a fixed number of concepts or an approval checkpoint at every stage.
+Identify the dominant weakness and correct it substantively. Revisit structure,
+crop, scale or typography if generic; recover hierarchy without erasing personality
+if crowded. Render again. A decorative accent does not fix a weak concept.
+Record a short evidence-based visual verdict, copy approval status and unresolved
+issues. Neither numerical scores nor passed export tests prove visual quality.
+Stop when the direction is convincingly realized with no identified material defect,
+not after arbitrary iterations or invented user approval.
 
-Sketch the information structure before adding decoration. Let the real image and message drive the layout. Neither a mandatory minimalist style nor a fixed image/text ratio is appropriate for every flyer.
+## 5. Reopen and hand off
 
-## 4. Build an editable composition
+Reopen the saved source from its delivery location and render again. Verify links,
+dimensions, curves, masks and agreement with the reviewed composition. Repair missing
+dependencies; disclose checks that cannot be performed instead of claiming success.
+For a separately requested adaptation, recompose for its viewing conditions rather
+than stretching the previous design.
 
-Read [tools and capability placeholders](references/tools.md) before selecting a backend or when a required operation lacks a reliable tool.
-
-Prefer the user's working CorelDRAW installation where usable. Otherwise use Inkscape; if missing, install it as described in that reference, within the host's permission rules. Use CorelDRAW directly through documented COM scripting on Windows, or author editable SVG and use Inkscape CLI/actions. Write project-specific scripts as needed; no custom adapter or fixed set of layout operations is required. No Corel-specific path, account, MCP server, or paid application is required by this skill.
-
-- Save a native editable source: CDR when genuinely created by CorelDRAW, SVG for Inkscape. Never disguise a format by renaming its extension.
-- Keep outlined text, logos/vectors, and photographs separate, with meaningful object or layer names. Compose text with real fonts, then convert each laid-out block to curves using the editor before treating it as artwork for review or delivery. Follow [text-to-curves](references/tools.md#convert-typeset-text-to-curves); do not defer outlining to print preflight.
-- Keep originals unchanged. Use prepared copies for cropping, masking, and retouching.
-- Use fonts actually available to the renderer, with the required language glyphs and weights. Follow brand requirements; disclose a missing font instead of silently substituting it.
-- Prefer deterministic placement and typography. Image generation may supply an optional background or illustration where suitable; it must not replace required authentic subjects, logos, or typeset copy.
-- Use consistent alignment, grouping, spacing, and a deliberate hierarchy. Check text against busy photo regions and avoid incidental tangencies.
-- Calculate effective image resolution from retained source pixels after cropping and final placed dimensions, using [image sizing](references/design-decisions.md#document-geometry-and-image-sizing). Compare with the project requirement; use a better source, smaller placement, or revised crop when insufficient. Neither DPI metadata changes nor upsampling recover missing original detail.
-- Record crop, font, and asset choices sufficiently to reproduce edits. Package or embed linked images so the source can be reopened; respect font redistribution restrictions.
-
-Use the smallest reliable toolchain. A missing convenience script is not a reason to abandon a task that a verified installed tool can complete.
-
-## 5. Render, assess, and refine
-
-Export a preview from the actual editable source with text converted to curves and inspect it. Reasoning about source coordinates alone is insufficient.
-
-Review at three useful scales: thumbnail for hierarchy, intended viewing size/context for legibility, and close-up for craft. Physical-size judgment on an uncalibrated screen is approximate; request or recommend a sample print when needed.
-
-Check:
-- Can the intended viewer identify the offer and next action without explanation?
-- Does the first glance land on the intended subject or message?
-- Are required facts, logo, contacts, and copy intact?
-- Are hierarchy, alignment, line breaks, contrast, spacing, and photo crops intentional?
-- Is any text clipped, substituted, lost against imagery, or made too small to fit?
-- Does the result feel specific to this brand and material rather than like a generic web card layout?
-- Are the editable source and rendered preview consistent?
-
-Proofread the rendered artwork against the current approved `copy.md`, block by block: omissions, spelling, diacritics, dates, prices, phone numbers, addresses, URLs, and qualifications. Check the same facts across all sides and adaptations. Decode any QR from the rendered output and compare its payload with the supplied destination. Outline paths cannot reliably be text-extracted; OCR can assist but does not replace the visual comparison. If copy is not approved, keep its status explicit.
-
-Correct the dominant weakness and re-render the affected result. Prefer refining the composition to accumulating decorations. Do not repeat unchanged checks or claim visual review when no image was inspected. This is a design review, not technical print validation.
-
-## 6. Adapt and hand off
-
-Recompose each requested format around its viewing conditions. Preserve identity and message, but adjust crop, hierarchy, copy density, and CTA placement; do not simply stretch or shrink the flyer.
-
-Reopen the saved CDR/SVG from its delivery location and render it again. Check image links, page dimensions, outlined text, masks, object placement, and agreement with the reviewed preview. Repair missing dependencies before delivery; if reopening is unavailable, record that specific check as unverified rather than claim a verified handoff.
-
-Deliver the editable vector source, its matching text content and typography recipe, appropriate review previews, and requested digital exports. Explain that text in the design is editable as curves, not as live text. A PDF produced here is a design/review export pending technical print checks. Include a short project note with chosen fonts/assets, unresolved items, and intended dimensions/variants for the separate [print-preflight skill](../print-preflight/SKILL.md). If that skill is unavailable, state that status and still deliver completed design work.
-
-Use versioned, descriptive filenames, such as `flyer-a5-front-v01.svg` and `flyer-a5-front-v01-preview.png`. Keep the working source and previews traceable to the same revision.
-
-Report briefly what was designed, where the files are, and what remains unresolved. Do not expose tooling details in the artwork.
-
-## Capability gaps and provenance
-
-The placeholders in [tools.md](references/tools.md#capability-placeholders) are intentionally unimplemented integration points, not commands. Record only gaps actually encountered; use the specified fallback or explain the precise blocked operation.
-
-This is an original promotional-design workflow informed by professional references and Anthropic's concept-then-refine approach. Read [sources](references/sources.md) when checking the basis of a recommendation or updating guidance.
+Deliver versioned source, matching preview, exact copy/typography recipe and the
+selected format's export. Text is editable as curves, not live text. Keep tooling
+details out of the artwork. Record the current revision and next action in project notes.
+For print delivery, continue through [print-preflight](../print-preflight/SKILL.md);
+a design candidate does not finish that task. Missing production verification means
+print preparation remains incomplete. Keep preview and release files distinct.

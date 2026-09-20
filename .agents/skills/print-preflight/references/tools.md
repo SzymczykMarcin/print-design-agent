@@ -1,8 +1,14 @@
 # Evidence tools and limitations
 
+Before first use, follow the shared [environment preparation](../../../../docs/environment.md)
+procedure: detect/install required dependencies, use the single root Poetry
+environment with Python 3.12 for every tool, and verify a real operation.
+
 Discover installed tools and verify version/help before use. Use absolute paths,
 save evidence in the private project, and preserve command exit codes/stderr.
 A commercial tool is useful when present but is not assumed to be installed.
+For print preparation, use verified editing/export capabilities as well as inspection;
+analysis-only behavior applies when the user explicitly requests an audit.
 Install dependencies only when needed and permitted by the task and host.
 
 ## Dedicated preflight
@@ -60,4 +66,6 @@ ink coverage, overprint or outlined-text structure, mark those checks `NOT VERIF
 Still finish the checks that can be supported. Specify the exact evidence needed
 from a production preflight tool or the printer; do not declare the whole file
 ready because simpler tools passed. Do not upload private artwork to an online
-checker without authorization.
+checker without authorization. In preparation mode, an unresolved mandatory check
+blocks release and task completion; retain the candidate in `working/print-candidates/`.
+A report documenting the gap does not replace the required verification.

@@ -1,102 +1,103 @@
 ---
 name: print-preflight
-description: Inspect final print PDFs against printer and product requirements for flyers, posters, banners, and related promotional materials. Check geometry, bleed, image resolution, outlined text, colors, transparency, overprint, and PDF/X when required; produce an evidence-based release report. Does not design artwork or certify unmeasured properties.
+description: Prepare, correct, export and verify a production PDF for one print material against the selected printer's requirements. Also supports explicit read-only audits. Print preparation finishes with a verified release file, not just a report.
 ---
 
 # Print Preflight
 
-Audit the exact PDF intended for printing, separately from design review. Produce
-an actionable report supported by measured properties and rendered inspection.
+Prepare -> inspect -> correct -> re-export -> verify -> release. A report of
+unresolved checks does not substitute for the requested production PDF.
 
-## Scope and inputs
+## Mode and context
 
-- Read the private project's brief, printer instructions/template, current PDF,
-  approved preview, and copy. Use the editable master when investigating an issue.
-- Work in the external project: reports in `reports/`, inspection renders in
-  `previews/`, print candidates in `exports/print/`. Preserve originals.
-- An inspection request authorizes inspection, not silent fixes, re-exporting,
-  uploading files, or ordering print. Apply changes only within an explicitly
-  requested correction task, using a new revision and rechecking it afterward.
-- Respect this repository's outlined-text workflow. Distinguish that project rule
-  from PDF/X requirements; outlining is not universally required by PDF/X.
+Read the brief, copy, reviewed design, source and printer specification for the one
+selected material. Preparation authorizes necessary technical fixes and exports
+within that design, preserving originals and prior revisions. Route substantive
+composition changes to `flyer-design`; resolve decisions beyond existing authority.
+An explicit inspection-only/no-modification request is read-only: audit completion
+does not imply release readiness. Neither mode authorizes external uploads or orders.
 
-## 1. Establish the acceptance criteria
+Keep candidates in `working/print-candidates/`, renders in `previews/` and evidence
+in `reports/`; reserve `exports/print/` for released bytes. Do not silently move or
+overwrite existing files. Reuse applicable specs/setup records, but inspect each
+new or changed candidate rather than inheriting an old pass.
 
-Read [inspection criteria](references/checks.md). Collect the chosen printer,
-product, substrate/process, trim dimensions, sides/page order, bleed and safe
-insets, folds/finishing, accepted PDF standard, color/ICC requirements, image
-resolution targets, ink limits, and marks/spot-color rules where applicable.
+## 1. Resolve the production target
 
-Use the actual order's specification and template. Consult the printer's current
-product instructions online when needed; record URL/version/access date. General
-references in [sources](references/sources.md) inform checks but do not override
-a product-specific requirement. If sources conflict, flag the conflict rather
-than silently choosing one. Do not impose universal 3 mm bleed, 300 ppi, CMYK-only,
-or one PDF/X flavor on every job.
+Use the selected printer/product's current specification, recording its source/date.
+Resolve trim, sides/order, bleed, safe insets, process/paper, finishing, PDF standard,
+ICC/color requirements, resolution and applicable ink limits. Check project files
+and published instructions before asking for missing information. Continue independent
+work while waiting; arbitrary profiles or generic 3 mm / 300 PPI presets cannot
+establish readiness. A demo needs an authorized, documented production target too.
 
-If requirements are missing, ask for the material missing information and continue
-independent inspection. Report provisional targets explicitly; do not pass release
-against guessed requirements. Mark genuinely irrelevant checks as not applicable
-with a reason, rather than making every job require every possible specification.
+Plan CMYK with the required destination ICC profile unless the printer explicitly
+accepts another managed workflow, such as profiled RGB in PDF/X-4; record exceptions.
+Fix incorrect source/destination settings rather than returning to sRGB because it
+looks brighter. Profile assignment is not conversion.
 
-## 2. Identify the file and available evidence
+## 2. Export and inspect
 
-Record the PDF path, byte size, SHA-256, page count, and intended revision. Record
-inspection tool versions and any preflight profile name/version. Read
-[tools and limitations](references/tools.md) before choosing a checking method.
+- Read [checks](references/checks.md) for every initial candidate audit; apply all
+  relevant categories. This mandatory coverage is not an optional optimization.
+- Read relevant sections of [tools](references/tools.md) when choosing a checker,
+  setting up or resolving an unsupported check. Reuse verified tools otherwise.
+- Consult [sources](references/sources.md) only for research or disputed guidance;
+  generic references never override the actual product specification.
 
-Inspect the actual PDF, not only the source document, filename, export preset,
-DPI metadata, or an earlier preview. If only CDR/SVG is supplied, inspect what is
-possible and state that the final PDF is missing; source checks do not release an
-unseen export. A logo-vectorizer asset PDF is not the final flyer PDF.
+In preparation mode, export a candidate from CDR/SVG if no PDF exists. For PDF-only
+inputs use a verified fixup or obtain the source when necessary. Set document size,
+page range, bleed, PDF version, color conversion/profile, compression and resampling;
+verify actual output instead of trusting editor defaults or successful API calls.
+Keep logo/text vector and lettering outlined. Do not rasterize the entire page,
+upscale to invent detail or enlarge boxes to invent bleed.
 
-## 3. Run structural, object, and rendered checks
+The PDF contains only this material: one page for a single-sided flyer/poster,
+front/back as specified for a two-sided flyer. No social versions, mockups, comparison
+boards, cover pages or reports; no imposition unless requested by the printer.
 
-Apply every relevant category in [checks](references/checks.md): file integrity,
-page geometry and bleed content, effective image resolution, text as curves,
-color/ICC/ink coverage, overprint/transparency, finishing separations, and final
-visual/content comparison. Cover all pages; record page-specific findings.
+Record file size, SHA-256, page count, tool/profile versions and inspect the exact
+PDF: geometry, actual bleed, safe insets, effective PPI, paths/text, colors/ICC,
+ink coverage, overprint/transparency, finishing and required PDF conformance.
+Follow nested objects and inspect every page. Source checks, empty text extraction,
+font/image inventories and DPI metadata alone cannot establish compliance.
 
-Use the best available measured evidence. A command that runs successfully is not
-a passing print check. Distinguish a measured failure from a check the tool cannot
-perform. Never infer CMYK compliance from image inventory alone, outlined text
-from an empty text extraction, or sufficient bleed from page boxes alone.
+Render every page; inspect trim and bleed separately and compare with reviewed
+artwork and exact copy, including fine lettering, page order and QR payloads.
+RGB renders cannot verify separations, ink coverage or press color fidelity.
 
-Render the candidate PDF and inspect the trimmed result and bleed separately.
-Compare with the approved design and copy, including small outlined lettering,
-contact details, front/back order, and decoded QR destination. Ordinary RGB renders
-cannot establish accurate separations, total ink coverage, or press color fidelity.
+## 3. Correct until the release gate passes
 
-## 4. Report the decision
+For each failure, fix its cause, export a new candidate and rerun affected checks
+plus file integrity and every page's visual review. Recompute the hash and retain
+revision evidence. Do not end with a list of defects you can still fix.
+Try a suitable available/installable validator for missing mandatory capabilities.
+If blocked by input, permissions, licensing or verification limits, record the
+exact blocker and next action; keep the candidate a draft and preparation incomplete.
 
-Write `reports/print-preflight-<revision>.md` and retain relevant tool output and
-inspection images beside it or in the project's existing evidence folders.
-The report must include:
+Write `reports/print-preflight-<revision>.md`: identity/hash, requirement sources,
+tool/profile versions, scope, page/object-specific requirement versus observation,
+evidence paths, result and correction. Per-check statuses: PASS, FAIL, WARNING,
+NOT VERIFIED, NOT APPLICABLE (explain applicability).
 
-- File identity/hash, requirement sources, tool/profile versions, and scope.
-- One row per relevant check: requirement, actual observation, page/object or
-  location, evidence path, result, and proposed correction where needed.
-- Per-check results: `PASS`, `FAIL`, `WARNING`, `NOT VERIFIED`, or `NOT APPLICABLE`.
-- Overall decision and the exact outstanding corrections or missing checks.
+| Overall result | Release decision |
+| --- | --- |
+| FAIL | A mandatory criterion fails: correct and recheck |
+| NOT VERIFIED | Required information/evidence is missing: resolve before release |
+| PASS WITH WARNINGS | All mandatory criteria pass; listed warnings are advisory only |
+| PASS | All applicable mandatory criteria verified and passed |
 
-Use `FAIL` overall when a confirmed mandatory requirement fails. Otherwise use
-`NOT VERIFIED` when a required criterion, measurement, or visual check is missing.
-Use `PASS WITH WARNINGS` only when mandatory checks pass and remaining findings
-are advisory; use `PASS` when all applicable requirements are verified and pass.
-Do not downgrade a failed requirement to a warning because the image looks good.
+Never hide a blocker as a warning or irrelevant check. Optional finishing absent
+from the job is not a blocker. Only PASS or PASS WITH WARNINGS plus the delivered
+verified file completes preparation; an audit report or preview cannot do so.
 
-A pass applies only to the recorded bytes, requirements, and inspection scope; it
-is not a guarantee of a physical press result. Mention printer proof/acceptance
-only when applicable, without inventing an extra approval gate for every task.
+## 4. Release and hand off
 
-## 5. Corrections and handoff
-
-For an authorized correction, prefer the editable source or a targeted,
-color-aware fixup. Preserve the prior revision. Do not silently rasterize the page,
-convert every spot ink, flatten all transparency, enlarge the artwork to invent
-bleed, or claim upsampling restored missing detail. Follow printer settings.
-
-After a change, regenerate evidence for the new file, rerun affected checks plus
-file integrity and all-page visual inspection, and update its hash. Old reports
-must not be reused as approval of changed bytes. Return a brief decision, report
-link, and highest-priority findings. Route composition changes to `flyer-design`.
+Copy the passing candidate to a descriptive, versioned path in `exports/print/`.
+Verify its SHA-256 matches inspected bytes and record the released path. Any later
+modification requires reinspection.
+Lead with that PDF, finished size and page/side count; link the trim preview and
+report separately. Label comparison boards as previews, never production files.
+State target and advisory findings; a pass applies to these bytes/specs, not every
+physical press result. If blocked, say preparation is incomplete and identify the
+missing step. In audit mode, deliver findings without implying a corrected release.

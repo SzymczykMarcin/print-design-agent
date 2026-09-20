@@ -15,6 +15,63 @@ Choose the structure from the content:
 
 Remove unnecessary content before reducing readable type. If required content is still too dense, change the structure or explain the format constraint.
 
+## Available design moves
+
+Choose a small, coherent set of moves that expresses the idea. This is a vocabulary,
+not a requirement to decorate every piece or adopt the same style in every sector.
+
+| Lever | Possible use | Judgment to apply |
+| --- | --- | --- |
+| Scale and proportion | An oversized keyword, an intimate crop, a dominant product or a quiet detail | Establish a clear lead; do not make everything equally loud |
+| Display typography | Condensed or expressive type, a weight/width contrast, purposeful line breaks | Match the voice; keep reading order and supporting details clear |
+| Image/type relationship | Type beside, around or selectively overlapping an image; subject crossing a boundary | Protect important image detail and letter recognition; avoid accidental tangencies |
+| Shape and silhouette | A geometric frame, irregular panel, cutout or shape echoing the offer | Give the form a reason; do not modify the logo to manufacture a motif |
+| Rhythm and movement | Repeated marks, spacing changes, diagonals or a sequence of aligned elements | Lead attention through the message rather than scatter it |
+| Color and texture | A focused accent, tonal field, vector hatching or a licensed texture | Preserve local text contrast and useful visual quiet |
+| Negative space | An intentional pause around the focal point or between unequal groups | Make space active; do not leave a large region empty merely because composition stopped |
+
+A business flyer can gain character from a precise typographic treatment, a strong
+photographic viewpoint or a visual metaphor within a restrained palette. A leisure
+brand can sustain more gesture and layering when the main message stays clear.
+These are possibilities, not sector stereotypes; a client's reference can point in
+a different direction.
+
+## From reference to editable construction
+
+Read a reference at two levels: its communication idea and its visual technique.
+For example, excitement might come from a large headline interacting with a person,
+not from the particular decorative swirls around them. Preserve that useful
+relationship while choosing an original construction appropriate to the supplied assets.
+
+- Use native clipping paths or masks for a subject crossing a shape. Inspect hair,
+  hands, transparent edges and halos; keep the original photograph unchanged.
+- Build waves, frames, gestures and icons as separate editable vector objects.
+- Use a suitable licensed font for expressive lettering and outline after typesetting.
+  Never simulate a headline by tracing letters from the reference bitmap.
+- Use actual supplied or licensed product photographs for photographic collages.
+  Do not imply that stock products or people are the client's products or endorsers.
+- Build texture with native vectors or a sufficiently detailed licensed raster;
+  keep it away from fine text when it weakens readability.
+
+The image, typography and supporting marks should belong to one visual idea.
+Separating a busy photo from copy is one valid technique, not a mandatory top-photo /
+bottom-text template. Likewise, overlapping everything is not inherently creative.
+
+## Selecting and challenging a direction
+
+For an unresolved brief, use quick rendered studies to compare genuinely different
+relationships: type-led, image-led or integrated composition, where relevant.
+Reject the weakest approach before polishing fine details. Do not generate a fixed
+number of variants when a supplied reference or accepted concept already resolves
+the direction.
+
+Evaluate the actual preview for attention, reading order, brand character,
+distinctiveness and craft. A technically clean design can still fail the brief.
+Name the specific failing relationship, change it and compare the new render.
+One family and a grid can be expressive; adding more fonts or ornaments is not a
+substitute for a stronger idea. Record provisional identity changes so the brief
+and brandbook follow the chosen direction rather than freezing an early guess.
+
 ## Document geometry and image sizing
 
 For print, distinguish three areas before composing: the final trimmed page,
@@ -45,7 +102,7 @@ Vector text and logos are resolution-independent; embedded raster images are not
 
 ## Typography and language
 
-Build a small set of functional text styles: headline, supporting text, details, and CTA. One family with suitable weights can be enough. Add a second family for a purposeful contrast, not variety alone.
+Build a small set of functional text styles: headline, supporting text, details, and CTA. One family with suitable weights can be enough, but it is not a default prescription for restraint. Use a contrasting display face or lettering when it strengthens the voice and emphasis; keep informational text easy to read. Existing brand rules govern the available choices.
 
 Judge font size using the actual font, viewing distance, audience, and background. For body paragraphs, 10-12 pt and leading around 120-145% are useful starting points from Practical Typography, not mandatory values for every flyer. Short display lines and narrow promotional blocks need their own treatment; do not impose book-length line measures.
 
@@ -76,7 +133,7 @@ Align to a coherent grid while allowing a deliberate focal exception. Keep recur
 
 Check current platform documentation for requested social placements. Organic posts, paid ads, profile grids, and shared thumbnails can crop differently. Do not treat a remembered pixel size or fixed safe-zone percentage as timeless.
 
-For a campaign, share typography, palette, photo treatment, and recognizable visual motifs while giving each format its own composition.
+In a later, separate adaptation task, reuse the accepted typography, palette, photo treatment and recognizable motifs while composing for that new format.
 
 ## Revision decisions
 

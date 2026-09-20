@@ -1,27 +1,77 @@
 # Project copy
 
-Status: fictional example, not for publication.
+Status: authored for a fictional demonstration; not approved for real publication.
+Only the blocks below belong in the artwork. Section labels and status notes do not.
+Keep the Polish lettering embedded in the supplied logo unchanged.
 
-## Headline
+## Flyer
 
-Help your plants thrive
+### Headline
 
-## Description / offer
+Make room for a little joy.
 
-A beginner's workshop on watering, light, and repotting houseplants.
+### Description / offer
 
-## Call to action
+Vanilla or chocolate. Cone or cup.
+Take an ice-cream break at Lodziarnia.
 
-Sign up for the workshop.
+### Call to action
 
-## Contact
+Drop by for your next treat.
 
-[Registration details to be supplied]
+### Visit details
 
-## Additional information / fine print
+12 Vanilla Lane, Sampletown
+Daily, 12:00-20:00
 
-[Date, location, and price to be supplied]
+### Additional information / fine print
+
+Demo only - fictional shop details.
+
+## Social feed
+
+### Headline
+
+Make room for a little joy.
+
+### Description / offer
+
+Vanilla or chocolate. Cone or cup.
+
+### Call to action
+
+Drop by Lodziarnia.
+
+### Visit details
+
+12 Vanilla Lane, Sampletown | Daily, 12:00-20:00
+
+### Additional information / fine print
+
+Demo only - fictional shop details.
+
+## Social story
+
+### Headline
+
+A little ice-cream break.
+
+### Call to action
+
+Drop by Lodziarnia.
+
+### Visit details
+
+12 Vanilla Lane, Sampletown
+Daily, 12:00-20:00
+
+### Additional information / fine print
+
+Demo only - fictional shop details.
 
 ## Facts requiring confirmation
 
-All event details must be provided before publication.
+The product range, address and hours are invented example data. For a real project,
+replace them with verified business facts and remove the demo notice only after
+that review. No web address, phone number, social handle or QR destination is supplied
+or required for this walk-in exercise. Do not invent one during design.

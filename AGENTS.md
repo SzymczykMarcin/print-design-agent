@@ -1,87 +1,64 @@
-# Guide the user through promotional design
+# Promotional design workflow
 
-These instructions govern flyer, poster, banner, and social-graphic projects.
-They coordinate the user journey; detailed design and inspection procedures live
-in the skills. Do not impose a design intake on unrelated repository maintenance.
+Apply this workflow to design tasks, not unrelated repository maintenance.
+Use the user's language and concise replies; repository instructions stay English.
+Start a new project with four stages: brief/assets, copy/direction, design/revisions,
+delivery with print verification where applicable. State the current next step.
 
-## Explain the next step briefly
+## Scope and intake
 
-Use the user's language. Start a new design project with a short overview of four
-stages: brief and assets, copy and direction, design and revisions, delivery and
-print checks where applicable. State the current stage and what is needed next.
-Do not overwhelm the user with the full technical workflow.
+One material and target format per task. A two-sided flyer is one material; its
+source, PDF and preview are representations of it. Posters, feed graphics, stories
+and other adaptations are separate tasks that may reuse accepted work. If several
+are requested, establish which comes first and record the rest for later. Do not
+create other tasks without an explicit request.
 
-Repository instructions and reusable documentation stay in English. Artwork,
-copy and project conversations follow the project's requested language.
+Read existing project notes and supplied assets before asking questions. Establish
+purpose, audience, offer/action, dimensions/sides, factual copy, logo/photos and
+rights, brand rules, and printer/product requirements for print. Ask at most three
+short questions at a time about missing essentials. Draft the brief and copy from
+supplied facts; do not require the user to write them first.
 
-## Establish a private project
+Separate missing facts from proposed design choices and unresolved production
+specifications. Label assumptions; never invent real business facts, approval or
+printer requirements. Continue independent work while answers are pending. Explain
+missing assets and possible draft alternatives without replacing authentic subjects.
 
-First read any supplied project path, existing brief, copy, assets and previous
-decisions. Reuse that context; do not ask for information already available.
+## Project and environment
 
-Keep real projects outside this public repository. If the user has not chosen a
-location, suggest an external folder and ask which location to use. Once selected,
-create the project structure from [blank-project](examples/blank-project/) if it
-does not exist, without overwriting existing files. Do not merely tell the user to
-create folders. Use [demo-flyer](examples/demo-flyer/) to explain the structure when
-helpful; never copy its fictional facts into a real project.
+Real projects belong outside this public repository. Reuse the supplied location;
+otherwise suggest one and ask which to use. Once selected, create missing folders
+from [blank-project](examples/blank-project/) without overwriting files. Tell the
+user the exact asset location. The [demo](examples/demo-flyer/) contains fictional facts.
 
-Tell the user the exact existing folder where they can place materials. Originals
-belong in `inputs/`; prepared copies in `assets/`; editable artwork in `working/`;
-review images in `previews/`; final candidates in `exports/print/` or
-`exports/social/`; decisions and inspection evidence in `reports/`.
+| Location | Content |
+| --- | --- |
+| `inputs/`, `assets/` | Originals; prepared derivatives |
+| `working/`, `working/print-candidates/` | Editable sources; unreleased PDFs |
+| `previews/`, `reports/` | Review images; decisions and evidence |
+| `exports/print/`, `exports/social/` | Verified production PDFs; final digital images |
 
-## Gather only the missing essentials
+Use one root Poetry environment and Python 3.12 for all tools, through `poetry run`.
+On first setup or a dependency problem, follow [environment preparation](docs/environment.md)
+and perform routine authorized installation yourself. No per-tool environments.
 
-Inspect supplied materials before asking questions. Check:
+## Route, resume and deliver
 
-- Purpose, audience, offer and desired action.
-- Requested media, dimensions, sides/pages and required variants.
-- Exact business/event facts, contact details and required wording.
-- Supplied logo and photos, their intended roles and any usage restrictions.
-- Branding: colors, fonts and logo rules, or permission to propose a direction.
-- For print: the chosen printer/product and available production instructions.
-
-Ask at most three short, related questions at a time, prioritizing what blocks the
-next step. Identify missing files by purpose and tell the user where to place them.
-Do not demand a finished brief or polished copy: draft them from supplied facts
-and record the result in `brief.md` and `copy.md`.
-
-Distinguish three kinds of gaps: essential facts/assets that need user input,
-design choices the agent can reasonably propose, and production specifications
-needed before print release. Continue work that does not depend on unanswered
-questions. Label provisional choices and unresolved facts; never invent contact
-details, prices, claims, dates, brand approval or printer requirements.
-
-Missing photos or fonts need not block every layout. Explain the specific effect
-and offer a suitable composition or clearly labeled draft placeholder. Do not
-replace an authentic logo or required real subject with generated imagery.
-
-## Route execution to the skills
-
-Use [flyer-design](.agents/skills/flyer-design/SKILL.md) for copy, visual direction,
-composition, outlined typography, adaptations and design review. Let the skill
-select the editor and use the bundled logo tool only when appropriate. Users
-should not need to choose between internal scripts or understand COM to proceed.
-
-Show a rendered design when there is something concrete to assess. Ask focused
-questions about unresolved direction or content, not approval for every routine
-operation. Preserve accepted work and make scoped revisions. Keep copy status
-accurate; silence is not approval of invented or unconfirmed content.
-
-For a print deliverable, use [print-preflight](.agents/skills/print-preflight/SKILL.md)
-on the actual candidate PDF against the printer's requirements. Do not run print
-preflight for social-only work. Inspection does not authorize silent corrections;
-apply fixes within the user's requested scope and inspect the revised file again.
-
-## Maintain continuity and hand off clearly
-
-Update the existing brief and project notes with selected assets, copy status,
-accepted direction, latest revision and unresolved issues. Keep previous revisions
-and original inputs intact. On resuming, read these records and continue from the
-current stage instead of restarting intake.
-
-Deliver links to the artwork and previews, a brief account of what is complete,
-and any unresolved items. For print, include the preflight report and its actual
-result; never call an unverified PDF ready for production. Creating files does
-not authorize sending them to a printer or placing an order.
+- Use [flyer-design](.agents/skills/flyer-design/SKILL.md) for composition and visual
+  review; use [print-preflight](.agents/skills/print-preflight/SKILL.md) to finish
+  print delivery. Its release gate is mandatory; a draft PDF or report alone does
+  not complete print preparation. Explicit audit-only requests remain read-only.
+- Load only the active skill and reference sections needed for the current step.
+  Do not preload every reference, source list or installation guide.
+- Maintain existing `brief.md`, `copy.md`, `brandbook.md` and `reports/status.md`:
+  accepted direction, copy approval, assets, current revision, next action and gaps.
+  Record verified tool versions/paths privately and printer specs with source/date.
+- Resume from those records. Reuse research and setup while inputs, requirements
+  and environment remain applicable; recheck on changes, errors or stale evidence.
+  Cached decisions never replace inspection of a new or changed deliverable.
+- Show actual renders, make scoped revisions and preserve originals/accepted work.
+  Ask about meaningful unresolved choices, not every routine operation; silence is
+  not approval. Let the skills choose implementation tools.
+- Hand off artifact/preview links and actual status. For print include the release
+  report; unresolved mandatory checks mean incomplete preparation. Creating files
+  does not authorize external uploads, sending to a printer or placing an order.

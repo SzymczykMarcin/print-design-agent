@@ -1,6 +1,6 @@
 # Sources and design rationale
 
-Research checked on 2026-09-19. Consult only the source relevant to the current question. Platform specifications and application commands require rechecking when used.
+Original references checked on 2026-09-19; creative-direction research extended on 2026-09-20. Consult only the source relevant to the current question. Platform specifications and application commands require rechecking when used.
 
 ## Design and communication
 
@@ -11,6 +11,19 @@ Research checked on 2026-09-19. Consult only the source relevant to the current 
 - [Mailchimp: campaign copywriting](https://mailchimp.com/resources/how-to-copywrite-for-marketing-campaigns/) — audience, benefits, direct language, and clear action.
 - [LinkedIn: single-image ad specifications](https://www.linkedin.com/help/linkedin/answer/a427596/) — an example of placement-specific dimensions, cropping, and text constraints.
 - [DENSO WAVE: QR symbol area](https://www.qrcode.com/en/howto/code.html) — real symbol geometry and clear space, for a future QR helper.
+
+## Creative direction: additional primary sources
+
+- [Adobe: five design strategies](https://www.adobe.com/express/learn/blog/the-key-to-better-graphic-design-and-five-design-strategies) — emphasis through scale, color, type character and placement. Informs using display type and image relationships deliberately instead of treating all text as neutral labels.
+- [Canva: compositional flow and rhythm](https://www.canva.com/learn/flow-and-rhythm/) — connections between focal points, directional repetition and human gaze. Informs evaluating how attention travels through a composition, not only whether its blocks align.
+- [Pentagram: MIT Media Lab](https://www.pentagram.com/work/mit-media-lab) — a documented institutional identity using a shared grid and typographic consistency to support distinct expressions. A case study of creative scope within constraints, not a flyer template or permission to alter a client logo.
+- [Pentagram: The Public Theater](https://www.pentagram.com/work/the-public-theater) — promotional work whose typographic expression responds to its cultural context and changes over time. A contrasting case study, not a prescription for loud type in every project.
+
+The skill's workflow and review questions are an original synthesis of these
+principles and the repository's observed failure: a readable, technically valid
+export was mistaken for a convincing design. These sources do not certify the
+quality of any generated result. Inspect relevant visual examples during a real
+design task; do not imitate one studio's style or download its assets for reuse.
 
 ## Inspiration, not an imported skill
 
