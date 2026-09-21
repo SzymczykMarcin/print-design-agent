@@ -69,3 +69,11 @@ ready because simpler tools passed. Do not upload private artwork to an online
 checker without authorization. In preparation mode, an unresolved mandatory check
 blocks release and task completion; retain the candidate in `working/print-candidates/`.
 A report documenting the gap does not replace the required verification.
+
+## QR payload verification
+
+Use the bundled [QR tool](../../../../tools/qr-code/README.md) to verify the actual
+candidate PDF against the supplied destination. Select the expected page explicitly
+when placement matters; a document-wide match does not establish a QR on every page.
+The tool renders and decodes QR codes but does not inspect ink recipes, physical
+scan reliability, PDF/X conformance or the destination website. Those remain separate checks.

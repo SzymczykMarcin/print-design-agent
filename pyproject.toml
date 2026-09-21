@@ -14,13 +14,18 @@ dependencies = [
     "reportlab>=5.0",
     "svglib>=2.0",
     "pypdf (>=6.19.0,<7.0.0)",
+    "zxing-cpp (>=3.1.1,<4.0.0)",
 ]
 
 [project.scripts]
 logo-vectorizer = "logo_vectorizer.cli:main"
+qr-code = "qr_code.cli:main"
 
 [tool.poetry]
-packages = [{ include = "logo_vectorizer", from = "tools/logo-vectorizer/src" }]
+packages = [
+    { include = "logo_vectorizer", from = "tools/logo-vectorizer/src" },
+    { include = "qr_code", from = "tools/qr-code/src" },
+]
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=8.0"
@@ -39,4 +44,4 @@ src = ["tools/*/src"]
 select = ["E", "F", "I", "N", "UP", "B", "SIM"]
 
 [tool.pytest.ini_options]
-testpaths = ["tools/logo-vectorizer/tests"]
+testpaths = ["tools/logo-vectorizer/tests", "tools/qr-code/tests"]

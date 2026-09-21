@@ -2,7 +2,7 @@
 
 A workshop for creating print flyers and social media graphics from real photographs, authentic logos, and brand guidelines.
 
-**Status: design and print-inspection skills available.** The [flyer-design skill](.agents/skills/flyer-design/SKILL.md) covers promotional design and visual review. The workflow uses direct CorelDRAW COM scripting or editable SVG with Inkscape CLI. The standalone [logo-vectorizer](tools/logo-vectorizer/README.md) prepares raster logos. The [print-preflight skill](.agents/skills/print-preflight/SKILL.md) prepares, corrects and verifies a production PDF against printer requirements; only a passing release completes print preparation. Explicit audit-only requests remain read-only. Other optional helpers remain planned.
+**Status: design and print-inspection skills available.** The [flyer-design skill](.agents/skills/flyer-design/SKILL.md) covers promotional design and visual review. The workflow uses direct CorelDRAW COM scripting or editable SVG with Inkscape CLI. The standalone [logo-vectorizer](tools/logo-vectorizer/README.md) prepares raster logos. The [print-preflight skill](.agents/skills/print-preflight/SKILL.md) prepares, corrects and verifies a production PDF against printer requirements; only a passing release completes print preparation. Explicit audit-only requests remain read-only. The [QR tool](tools/qr-code/README.md) generates verified vector QR assets and checks their payload in rendered artwork. Other optional helpers remain planned.
 
 ## Contents
 
@@ -35,7 +35,8 @@ print-design-agent/
 |-- .gitignore                   Local and generated file exclusions
 |-- .agents/skills/              Task-specific skills
 |-- tools/                      Standalone tools
-|   `-- logo-vectorizer/         Own source, tests, and README
+|   |-- logo-vectorizer/         Logo preparation
+|   `-- qr-code/                 Vector QR generation and payload verification
 |-- examples/
 |   |-- blank-project/          Empty project to copy and fill in
 |   `-- demo-flyer/             The same structure with sample text

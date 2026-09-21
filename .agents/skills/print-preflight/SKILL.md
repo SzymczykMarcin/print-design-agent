@@ -64,6 +64,9 @@ font/image inventories and DPI metadata alone cannot establish compliance.
 
 Render every page; inspect trim and bleed separately and compare with reviewed
 artwork and exact copy, including fine lettering, page order and QR payloads.
+When QR codes are present, use the [QR verification procedure](references/tools.md#qr-payload-verification)
+on the actual candidate PDF, selecting each required page and expected payload.
+Retain the result with the inspection evidence; recheck after PDF changes.
 RGB renders cannot verify separations, ink coverage or press color fidelity.
 
 ## 3. Correct until the release gate passes

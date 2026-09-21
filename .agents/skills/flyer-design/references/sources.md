@@ -10,7 +10,7 @@ Original references checked on 2026-09-19; creative-direction research extended 
 - [Butterick: typography rules](https://practicaltypography.com/summary-of-key-rules.html) — body-text size, leading, and line length as starting points. These are not blanket rules for display typography.
 - [Mailchimp: campaign copywriting](https://mailchimp.com/resources/how-to-copywrite-for-marketing-campaigns/) — audience, benefits, direct language, and clear action.
 - [LinkedIn: single-image ad specifications](https://www.linkedin.com/help/linkedin/answer/a427596/) — an example of placement-specific dimensions, cropping, and text constraints.
-- [DENSO WAVE: QR symbol area](https://www.qrcode.com/en/howto/code.html) — real symbol geometry and clear space, for a future QR helper.
+- [DENSO WAVE: QR symbol area](https://www.qrcode.com/en/howto/code.html) — real symbol geometry and clear space, for QR asset generation and placement.
 
 ## Creative direction: additional primary sources
 

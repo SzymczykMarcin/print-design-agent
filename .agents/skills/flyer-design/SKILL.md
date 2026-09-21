@@ -23,6 +23,7 @@ notes and research; do not repeat intake or setup for a narrow revision.
 | Editor selection / setup | [Backend](references/tools.md#select-a-usable-backend), [direct scripting](references/tools.md#use-the-editor-directly); installation section only if needed |
 | Text outlining | [Text to curves](references/tools.md#convert-typeset-text-to-curves) |
 | Raster logo preparation | [Logo procedure](references/tools.md#prepare-a-raster-logo) |
+| QR asset generation / verification | [QR procedure](references/tools.md#generate-and-place-qr-assets) |
 | Missing capability | [Capability gaps](references/tools.md#capability-placeholders); these are not implemented commands |
 | Research / attribution | [Sources](references/sources.md) |
 
@@ -43,7 +44,8 @@ primary CTA. Separate proposed copy from approval. Never invent real prices,
 contacts, dates, testimonials, credentials or scarcity. Conspicuous placeholders
 may appear in drafts, not silently in finished work. For excessive copy, simplify
 within scope or propose a different structure/format before shrinking everything.
-Generate any QR with a real encoder and a supplied destination.
+For QR assets, follow the [QR procedure](references/tools.md#generate-and-place-qr-assets)
+with the supplied destination; use the bundled tool instead of recreating an encoder.
 
 ## 2. Choose a visual idea
 

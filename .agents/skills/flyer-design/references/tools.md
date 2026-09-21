@@ -109,6 +109,21 @@ lettering is live text. For failures use `--debug` and optionally `--log-file` i
 an existing private directory; diagnose the reported stage instead of recreating
 an alternative engine. Never store client logos or outputs in this public tool.
 
+## Generate and place QR assets
+
+Use the implemented [QR tool](../../../../tools/qr-code/README.md), not a new
+project-local encoder. Run `poetry run qr-code generate` with the supplied payload,
+an explicit private SVG output path and a chosen physical size. Read its README
+for arguments and verification semantics. Keep the SVG as a separate vector object;
+preserve its white quiet zone and square proportions. Choose placement and size
+for the composition rather than treating the tool defaults as design requirements.
+
+Generation verifies the standalone asset only. After placement and export, run
+`poetry run qr-code verify` against the actual review image or PDF and the exact
+expected payload. Retain the JSON result in private project reports. A successful
+decode does not establish print color suitability or physical scan reliability;
+final print verification belongs to print-preflight.
+
 ## Capability placeholders
 
 **Status: not implemented in this repository.** These names describe optional helpers for specific capability gaps. They are not installed commands, scripts, MCP tools, or required packages. Do not create tool infrastructure during a flyer task unless requested. Use an existing reliable tool or small project-local calculation where sufficient.
@@ -118,7 +133,6 @@ an alternative engine. Never store client logos or outputs in this public tool.
 | TOOL-ASSET-PROBE | Need exact image size, orientation, profile, or usable crop; original image and intended placement | Measured metadata and crop dimensions | Pillow or another installed metadata reader; inspect visually too |
 | TOOL-TEXT-MEASURE | Tight text fitting or uncertain font substitution; actual font, copy, frame, style | Renderer-consistent bounds, line breaks, glyph/fallback and overflow information | Native renderer, Inkscape geometry queries and rendered inspection; never estimate fit from character count alone |
 | TOOL-PHOTO-MASK | Subject extraction or difficult edge cleanup; image and intended mask | Non-destructive mask/derived image with inspected edges | Existing editor/masking tool; otherwise use a rectangular crop or report that precise cutout is unavailable |
-| TOOL-QR | A supplied destination needs a QR code | Real encoded SVG plus decode result from rendered output | Installed QR encoder/decoder libraries; if unavailable, leave a labeled draft placeholder or use the supplied readable URL |
 | TOOL-PREVIEW-RENDER | Need to assess the current source or exported review PDF | Images traceable to that exact revision | Native editor/Inkscape for SVG, an available PDF renderer for PDF; disclose inability to view instead of claiming review |
 
 Record an encountered gap in the project's existing notes: placeholder ID, affected task, fallback used, and unresolved limitation. Keep capability placeholders out of client-facing artwork. A temporary visual placeholder, such as a missing QR, must be visibly marked in drafts and resolved or explicitly excluded before finished design delivery.
